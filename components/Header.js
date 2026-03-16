@@ -15,9 +15,9 @@ export function Header({ locale = "en" }) {
     <header className="site-header">
       <div className="shell site-header__inner">
         <Link href={locale === "es" ? "/es" : "/"} className="brand-mark">
-          <span className="brand-mark__kicker">Last Chance</span>
+          <span className="brand-mark__kicker">Last Chance Store</span>
           <span className="brand-mark__name">
-            {locale === "es" ? "Liquidacion Bakersfield" : "Bakersfield Liquidation"}
+            {locale === "es" ? "Liquidación Bakersfield" : "Bakersfield Liquidation"}
           </span>
         </Link>
 
@@ -32,9 +32,11 @@ export function Header({ locale = "en" }) {
           ))}
         </nav>
 
-        <Link href={locale === "es" ? "/" : "/es"} className="locale-toggle">
-          {locale === "es" ? "English" : "Español"}
-        </Link>
+        <div className="header-actions">
+          <Link href={locale === "es" ? "/" : "/es"} className="locale-toggle">
+            {locale === "es" ? "English" : "Español"}
+          </Link>
+        </div>
       </div>
     </header>
   );
